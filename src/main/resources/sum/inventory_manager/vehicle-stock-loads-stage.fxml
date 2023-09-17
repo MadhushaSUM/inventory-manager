@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="480.0" prefWidth="680.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sum.inventory_manager.vehicleStockLoadsController">
+   <children>
+      <TableView fx:id="vehicleStockLoadTable" layoutX="250.0" layoutY="50.0" prefHeight="432.0" prefWidth="660.0" AnchorPane.bottomAnchor="38.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0">
+        <columns>
+          <TableColumn fx:id="colId" prefWidth="30.0" text="ID" />
+          <TableColumn fx:id="colDate" prefWidth="100.0" text="Date" />
+            <TableColumn fx:id="colProduct" prefWidth="160.0" text="Product" />
+            <TableColumn fx:id="colQuantity" prefWidth="120.0" text="Quantity" />
+            <TableColumn fx:id="colUnitPrice" prefWidth="120.0" text="Unit Price" />
+            <TableColumn fx:id="colOrigin" prefWidth="120.0" text="Origin" />
+        </columns>
+      </TableView>
+   </children>
+</AnchorPane>

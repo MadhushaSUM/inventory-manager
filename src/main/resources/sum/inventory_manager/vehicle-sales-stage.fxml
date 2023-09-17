@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="825.0" prefWidth="680.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sum.inventory_manager.vehicleSalesController">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#1f93ff00" height="265.0" layoutX="10.0" layoutY="351.0" stroke="BLACK" strokeType="INSIDE" width="660.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#1f93ff00" height="265.0" layoutX="10.0" layoutY="76.0" stroke="BLACK" strokeType="INSIDE" width="660.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#1f93ff00" height="50.0" layoutX="10.0" layoutY="10.0" stroke="BLACK" strokeType="INSIDE" width="660.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0" />
+      <TableView fx:id="vehicleSaleTable" layoutX="10.0" layoutY="124.0" prefHeight="169.0" prefWidth="660.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="124.0">
+        <columns>
+          <TableColumn fx:id="colStock" prefWidth="280.0" text="Stock" />
+            <TableColumn fx:id="colQuantity" prefWidth="130.0" text="Quantity" />
+            <TableColumn fx:id="colUnitPrice" prefWidth="130.0" text="Unit Price" />
+            <TableColumn fx:id="colSaleTotal" prefWidth="95.0" text="Total" />
+        </columns>
+      </TableView>
+      <TextField fx:id="txtSaleUnitPrice" layoutX="449.0" layoutY="87.0" prefHeight="26.0" prefWidth="120.0" styleClass="TextField" AnchorPane.leftAnchor="448.0" />
+      <Label layoutX="30.0" layoutY="93.0" text="Stock" AnchorPane.leftAnchor="20.0" />
+      <Label layoutX="196.0" layoutY="93.0" text="Quantity" AnchorPane.leftAnchor="196.0" />
+      <Label layoutX="388.0" layoutY="93.0" text="Unit Price" AnchorPane.leftAnchor="388.0" />
+      <Button layoutX="550.0" layoutY="87.0" mnemonicParsing="false" onAction="#addSaleItem" prefHeight="26.0" prefWidth="61.0" text="Add" AnchorPane.rightAnchor="20.0" />
+      <DatePicker fx:id="saleDate" layoutX="452.0" layoutY="21.0" prefHeight="26.0" prefWidth="203.0" styleClass="DatePicker" AnchorPane.rightAnchor="20.0" />
+      <Label layoutX="370.0" layoutY="25.0" text="Date" />
+      <TextField fx:id="txtSaleQuantity" layoutX="252.0" layoutY="87.0" prefHeight="26.0" prefWidth="120.0" styleClass="TextField" AnchorPane.leftAnchor="257.0" AnchorPane.topAnchor="87.0" />
+      <Label layoutX="70.0" layoutY="25.0" text="Customer" AnchorPane.leftAnchor="20.0" />
+      <Label layoutX="490.0" layoutY="307.0" text="Total" AnchorPane.leftAnchor="490.0" />
+      <TextField fx:id="txtSaleTotal" editable="false" focusTraversable="false" layoutX="568.8" layoutY="303.0" prefHeight="26.0" prefWidth="91.0" styleClass="TextField" AnchorPane.rightAnchor="20.0" />
+      <Button layoutX="568.8" layoutY="736.0" mnemonicParsing="false" onAction="#addVehicleSale" prefHeight="26.0" prefWidth="91.0" text="Confirm" AnchorPane.rightAnchor="20.0" />
+      <TextField fx:id="txtDiscounts" layoutX="569.0" layoutY="626.0" prefHeight="26.0" prefWidth="91.0" styleClass="TextField" AnchorPane.rightAnchor="20.0" />
+      <Label layoutX="490.0" layoutY="630.0" text="Discounts" AnchorPane.leftAnchor="490.0" />
+      <TableView fx:id="vehicleReturnTable" layoutX="20.0" layoutY="399.0" prefHeight="169.0" prefWidth="660.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0">
+         <columns>
+            <TableColumn fx:id="colReturnProduct" prefWidth="250.0" text="Product" />
+            <TableColumn fx:id="colReturnQuantity" prefWidth="100.0" text="Quantity" />
+            <TableColumn fx:id="colReturnUnitPrice" prefWidth="100.0" text="Unit Price" />
+            <TableColumn fx:id="colReturnSaleTotal" prefWidth="100.0" text="Total" />
+            <TableColumn fx:id="colIsDamaged" prefWidth="90.0" text="Damaged" />
+         </columns>
+      </TableView>
+      <TextField fx:id="txtReturnUnitPrice" layoutX="408.0" layoutY="363.0" prefHeight="26.0" prefWidth="70.0" styleClass="TextField" AnchorPane.leftAnchor="408.0" />
+      <Label layoutX="20.0" layoutY="369.0" text="Product" />
+      <Label layoutX="201.0" layoutY="369.0" text="Quantity" />
+      <Label layoutX="347.0" layoutY="369.0" text="Unit Price" />
+      <Button layoutX="598.0" layoutY="363.0" mnemonicParsing="false" onAction="#addReturnItem" prefHeight="26.0" prefWidth="61.0" text="Add" />
+      <TextField fx:id="txtReturnQuantity" layoutX="257.0" layoutY="363.0" prefHeight="26.0" prefWidth="70.0" styleClass="TextField" AnchorPane.leftAnchor="257.0" />
+      <Label layoutX="490.0" layoutY="583.0" text="Returns" />
+      <TextField fx:id="txtReturnTotal" editable="false" focusTraversable="false" layoutX="569.0" layoutY="579.0" prefHeight="26.0" prefWidth="91.0" styleClass="TextField" />
+      <TextField fx:id="txtPaid" layoutX="569.0" layoutY="663.0" prefHeight="26.0" prefWidth="91.0" styleClass="TextField" />
+      <Label layoutX="490.0" layoutY="667.0" text="Paid" />
+      <TextField fx:id="txtCredit" focusTraversable="false" layoutX="569.0" layoutY="700.0" prefHeight="26.0" prefWidth="91.0" styleClass="TextField" />
+      <Label layoutX="490.0" layoutY="704.0" text="Credit" />
+      <Label layoutX="498.0" layoutY="369.0" text="Damaged" />
+      <CheckBox fx:id="isReturnDamaged" layoutX="560.0" layoutY="369.0" mnemonicParsing="false" />
+      <Button layoutX="295.0" layoutY="775.0" mnemonicParsing="false" onAction="#viewSales_clicked" prefHeight="26.0" prefWidth="91.0" text="View Sales" AnchorPane.leftAnchor="295.0" AnchorPane.rightAnchor="294.0" />
+   </children>
+</AnchorPane>

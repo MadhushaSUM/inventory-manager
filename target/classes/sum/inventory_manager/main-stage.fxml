@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="900.0" styleClass="background_pane" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sum.inventory_manager.mainController">
+   <children>
+      <Label fx:id="title_label" alignment="CENTER" layoutX="450.0" layoutY="83.0" styleClass="title_label" AnchorPane.bottomAnchor="500.0" AnchorPane.leftAnchor="200.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <font>
+            <Font name="Segoe UI Bold" size="50.0" />
+         </font>
+      </Label>
+      <Button fx:id="close_button" alignment="CENTER" layoutX="548.0" layoutY="1.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="25.0" styleClass="close_button" text="X" AnchorPane.rightAnchor="-1.0" AnchorPane.topAnchor="-1.0" />
+      <Pane layoutX="14.0" layoutY="108.0" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="700.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Button fx:id="product_button" alignment="CENTER_RIGHT" layoutX="50.0" layoutY="100.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="150.0" styleClass="main_buttons" text="Products" />
+            <Button fx:id="customer_button" alignment="CENTER_RIGHT" layoutX="50.0" layoutY="155.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="150.0" styleClass="main_buttons" text="Customers" />
+            <Button fx:id="store_stock_button" alignment="CENTER_RIGHT" layoutX="50.0" layoutY="210.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="150.0" styleClass="main_buttons" text="Store Stocks" />
+            <Button fx:id="store_sales_button" alignment="CENTER_RIGHT" layoutX="50.0" layoutY="265.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="150.0" styleClass="main_buttons" text="Store Sales" />
+            <Button fx:id="vehicles_button" alignment="CENTER_RIGHT" layoutX="50.0" layoutY="320.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="150.0" styleClass="main_buttons" text="Vehicles" />
+            <Button fx:id="vehicleStockSale_button" alignment="CENTER_RIGHT" layoutX="50.0" layoutY="375.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="150.0" styleClass="main_buttons" text="Vehicle Stock and Sales" />
+            <Button fx:id="credit_button" alignment="CENTER_RIGHT" layoutX="50.0" layoutY="430.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="150.0" styleClass="main_buttons" text="Credits" />
+            <Button fx:id="review_button" alignment="CENTER_RIGHT" layoutX="50.0" layoutY="485.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="150.0" styleClass="main_buttons" text="Review" />
+         </children>
+      </Pane>
+      <ScrollPane fx:id="main_pane" layoutX="373.0" layoutY="272.0" prefHeight="200.0" prefWidth="200.0" styleClass="main_pane" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="200.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="100.0" />
+   </children>
+</AnchorPane>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<launch4jConfig>
+  <dontWrapJar>false</dontWrapJar>
+  <headerType>gui</headerType>
+  <jar>D:\Intellij_Projects[1]\Intellij Projects\Java11\Inventory_Manager\out\artifacts\Inventory_Manager_jar\Inventory_Manager.jar</jar>
+  <outfile>D:\Intellij_Projects[1]\Intellij Projects\Java11\Inventory_Manager\out\artifacts\Inventory_Manager_jar\Inventory_Manager.exe</outfile>
+  <errTitle></errTitle>
+  <cmdLine></cmdLine>
+  <chdir>.</chdir>
+  <priority>normal</priority>
+  <downloadUrl></downloadUrl>
+  <supportUrl></supportUrl>
+  <stayAlive>false</stayAlive>
+  <restartOnCrash>false</restartOnCrash>
+  <manifest></manifest>
+  <icon>D:\Intellij_Projects[1]\Intellij Projects\Inventory manager\Icon.ico</icon>
+  <jre>
+    <path>%JAVA_HOME%;%PATH%</path>
+    <requiresJdk>false</requiresJdk>
+    <requires64Bit>false</requires64Bit>
+    <minVersion>11</minVersion>
+    <maxVersion></maxVersion>
+  </jre>
+  <versionInfo>
+    <fileVersion>1.0.0.0</fileVersion>
+    <txtFileVersion>1.0</txtFileVersion>
+    <fileDescription>Inventory Manager Software developed by SUM Developers</fileDescription>
+    <copyright>SUM Developers</copyright>
+    <productVersion>1.0.0.0</productVersion>
+    <txtProductVersion>1.0</txtProductVersion>
+    <productName>Inventory Manager</productName>
+    <companyName>SUM Developers</companyName>
+    <internalName>SUM</internalName>
+    <originalFilename>Inventory Manager.exe</originalFilename>
+    <trademarks>SUM Develpers</trademarks>
+    <language>ENGLISH_US</language>
+  </versionInfo>
+</launch4jConfig>

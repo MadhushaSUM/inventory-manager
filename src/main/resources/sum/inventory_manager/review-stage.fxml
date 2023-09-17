@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="958.0" prefWidth="680.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sum.inventory_manager.reviewController">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#1f93ff00" height="240.0" layoutX="10.0" layoutY="161.0" stroke="BLACK" strokeType="INSIDE" width="660.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#1f93ff00" height="45.0" layoutX="181.0" layoutY="68.0" stroke="BLACK" strokeType="INSIDE" width="660.0" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="10.0" />
+      <DatePicker fx:id="fromDate" layoutX="265.0" layoutY="20.0" prefWidth="150.0" styleClass="DatePicker" />
+      <DatePicker fx:id="toDate" layoutX="451.6" layoutY="20.0" prefWidth="150.0" styleClass="DatePicker" AnchorPane.rightAnchor="78.0" />
+      <Label layoutX="16.0" layoutY="24.0" text="Vehicle" />
+      <Label layoutX="227.0" layoutY="24.0" text="From" />
+      <Label layoutX="427.0" layoutY="24.0" text="To" />
+      <Button layoutX="612.0" layoutY="20.0" mnemonicParsing="false" onAction="#search_clicked" text="Search" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#1f93ff00" height="86.0" layoutX="27.0" layoutY="74.0" stroke="BLACK" strokeType="INSIDE" width="660.0" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="65.0" />
+      <Label layoutX="27.0" layoutY="81.0" text="Sale Total" />
+      <TextField fx:id="txtSaleTotal" editable="false" layoutX="89.0" layoutY="77.0" prefWidth="120.0" styleClass="TextField" />
+      <Label layoutX="27.0" layoutY="117.0" text="Discounts" />
+      <TextField fx:id="txtDiscounts" editable="false" layoutX="89.0" layoutY="113.0" prefWidth="120.0" styleClass="TextField" />
+      <Label layoutX="250.0" layoutY="81.0" text="Returns" />
+      <TextField fx:id="txtReturns" editable="false" layoutX="312.0" layoutY="77.0" prefWidth="120.0" styleClass="TextField" />
+      <Label layoutX="250.0" layoutY="117.0" text="Credit" />
+      <TextField fx:id="txtCredits" editable="false" layoutX="312.0" layoutY="113.0" prefWidth="120.0" styleClass="TextField" />
+      <Label layoutX="472.0" layoutY="81.0" text="Net sales" />
+      <TextField fx:id="txtNetTotal" editable="false" layoutX="534.0" layoutY="77.0" prefWidth="120.0" styleClass="TextField" />
+      <TableView fx:id="vehicleUnloadTable" layoutX="20.0" layoutY="190.0" prefHeight="200.0" prefWidth="200.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="190.0">
+        <columns>
+          <TableColumn fx:id="colId" prefWidth="30.0" text="ID" />
+          <TableColumn fx:id="colDate" prefWidth="120.0" text="Date" />
+            <TableColumn fx:id="colStock" prefWidth="180.0" text="Stock" />
+            <TableColumn fx:id="colQuantity" prefWidth="101.0" text="Quantity" />
+            <TableColumn fx:id="colUnitPrice" prefWidth="101.0" text="Unit Price" />
+            <TableColumn fx:id="colDestination" prefWidth="101.0" text="Destination" />
+        </columns>
+      </TableView>
+      <Label layoutX="21.0" layoutY="167.0" text="Unloads" AnchorPane.leftAnchor="20.0">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#1f93ff00" height="240.0" layoutX="10.0" layoutY="412.0" stroke="BLACK" strokeType="INSIDE" width="660.0" />
+      <TableView fx:id="returnTable" layoutX="20.0" layoutY="441.0" prefHeight="200.0" prefWidth="200.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0">
+         <columns>
+            <TableColumn fx:id="colReturnId" prefWidth="30.0" text="ID" />
+            <TableColumn fx:id="colReturnProduct" prefWidth="250.0" text="Products" />
+            <TableColumn fx:id="colReturnQuantity" prefWidth="117.0" text="Quantity" />
+            <TableColumn fx:id="colReturnUnitPrice" prefWidth="117.0" text="Unit Price" />
+            <TableColumn fx:id="colReturnDamaged" prefWidth="117.0" text="Damaged?" />
+         </columns>
+      </TableView>
+      <Label layoutX="20.0" layoutY="418.0" text="Returns">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#1f93ff00" height="240.0" layoutX="10.0" layoutY="662.0" stroke="BLACK" strokeType="INSIDE" width="660.0" />
+      <TableView fx:id="stockLoadTable" layoutX="20.0" layoutY="691.0" prefHeight="200.0" prefWidth="200.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0">
+         <columns>
+            <TableColumn fx:id="colLoadId" prefWidth="30.0" text="ID" />
+            <TableColumn fx:id="colLoadDate" prefWidth="100.0" text="Date" />
+            <TableColumn fx:id="colLoadProduct" prefWidth="200.0" text="Products" />
+            <TableColumn fx:id="colLoadQuantity" prefWidth="100.0" text="Quantity" />
+            <TableColumn fx:id="colLoadUnitPrice" prefWidth="100.0" text="Unit Price" />
+            <TableColumn fx:id="colLoadOrigin" prefWidth="100.0" text="Origin" />
+         </columns>
+      </TableView>
+      <Label layoutX="20.0" layoutY="668.0" text="Loads">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

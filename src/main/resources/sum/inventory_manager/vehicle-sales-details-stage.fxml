@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="599.0" prefWidth="680.0" styleClass="background_pane_popup" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sum.inventory_manager.vehicleSaleDetailsController">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#1f93ff00" height="215.0" layoutX="10.0" layoutY="108.0" stroke="BLACK" strokeType="INSIDE" width="660.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#1f93ff00" height="50.0" layoutX="10.0" layoutY="10.0" stroke="BLACK" strokeType="INSIDE" styleClass="background_pane" width="660.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0" />
+      <TableView fx:id="vehicleSaleTable" layoutX="20.0" layoutY="142.0" prefHeight="169.0" prefWidth="660.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="142.0">
+        <columns>
+          <TableColumn fx:id="colStock" prefWidth="280.0" text="Stock" />
+            <TableColumn fx:id="colQuantity" prefWidth="130.0" text="Quantity" />
+            <TableColumn fx:id="colUnitPrice" prefWidth="130.0" text="Unit Price" />
+            <TableColumn fx:id="colSaleTotal" prefWidth="95.0" text="Total" />
+        </columns>
+      </TableView>
+      <Label layoutX="370.0" layoutY="25.0" text="Date" />
+      <Label layoutX="70.0" layoutY="25.0" text="Customer" AnchorPane.leftAnchor="20.0" />
+      <Label layoutX="17.0" layoutY="75.0" text="Sale Total" AnchorPane.leftAnchor="17.0" AnchorPane.topAnchor="75.0" />
+      <TextField fx:id="txtSaleTotal" editable="false" focusTraversable="false" layoutX="79.6" layoutY="70.0" prefHeight="26.0" prefWidth="70.0" styleClass="TextField" AnchorPane.rightAnchor="530.0" AnchorPane.topAnchor="70.0" />
+      <Button layoutX="295.0" layoutY="560.0" mnemonicParsing="false" onAction="#close" prefHeight="26.0" prefWidth="91.0" text="Close" AnchorPane.leftAnchor="295.0" AnchorPane.rightAnchor="295.0" />
+      <TextField fx:id="txtCustomer" layoutX="84.0" layoutY="23.0" prefWidth="200.0" styleClass="TextField" AnchorPane.topAnchor="21.0" />
+      <TextField fx:id="txtDate" layoutX="94.0" layoutY="21.0" prefWidth="200.0" styleClass="TextField" AnchorPane.rightAnchor="20.0" />
+      <Label layoutX="20.0" layoutY="119.0" text="Sales" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="119.0">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#1f93ff00" height="215.0" layoutX="10.0" layoutY="334.0" stroke="BLACK" strokeType="INSIDE" width="660.0" />
+      <TableView fx:id="vehicleReturnTable" layoutX="20.0" layoutY="368.0" prefHeight="169.0" prefWidth="660.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0">
+         <columns>
+            <TableColumn fx:id="colReturnProduct" prefWidth="244.0" text="Product" />
+            <TableColumn fx:id="colReturnQuantity" prefWidth="105.0" text="Quantity" />
+            <TableColumn fx:id="colReturnUnitPrice" prefWidth="105.0" text="Unit Price" />
+            <TableColumn fx:id="colReturnSaleTotal" prefWidth="105.0" text="Total" />
+            <TableColumn fx:id="colIsDamaged" prefWidth="75.0" text="Damaged" />
+         </columns>
+      </TableView>
+      <Label layoutX="20.0" layoutY="345.0" text="Returns">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="161.0" layoutY="75.0" text="Discounts" />
+      <TextField fx:id="txtDiscounts" editable="false" focusTraversable="false" layoutX="224.0" layoutY="70.0" prefHeight="26.0" prefWidth="70.0" styleClass="TextField" />
+      <Label layoutX="305.0" layoutY="75.0" text="Returns" />
+      <TextField fx:id="txtReturns" editable="false" focusTraversable="false" layoutX="357.0" layoutY="70.0" prefHeight="26.0" prefWidth="70.0" styleClass="TextField" />
+      <Label layoutX="438.0" layoutY="75.0" text="Paid" />
+      <TextField fx:id="txtPaid" editable="false" focusTraversable="false" layoutX="471.0" layoutY="70.0" prefHeight="26.0" prefWidth="70.0" styleClass="TextField" />
+      <Label layoutX="552.0" layoutY="75.0" text="Credit" />
+      <TextField fx:id="txtCredits" editable="false" focusTraversable="false" layoutX="595.0" layoutY="70.0" prefHeight="26.0" prefWidth="70.0" styleClass="TextField" />
+   </children>
+</AnchorPane>
